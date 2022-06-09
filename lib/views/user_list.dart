@@ -7,14 +7,18 @@ class UserList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final users = {...DUMMY_USERS};
-    return Scaffold(appBar: AppBar(
-      title: Text('Lista de usuarios',),
-      centerTitle: true,
-    ),
+    final users = {...DUMMY_USERS}; //Banco com usuarios
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Lista de usuarios',
+        ),
+        centerTitle: true,
+      ),
       body: ListView.builder(
         itemCount: users.length,
-        itemBuilder: (ctx, i)=>UserTile(users.values.elementAt(i)),),
+        itemBuilder: (ctx, i) => UserTile(users.values.elementAt(i)),
+      ),
     );
   }
 }
